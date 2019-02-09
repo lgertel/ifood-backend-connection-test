@@ -9,6 +9,8 @@ import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
+
 @Component
 @ProcessingGroup("amqpEvents")
 @AllArgsConstructor
@@ -20,7 +22,9 @@ public class RestaurantEventService {
   @EventHandler
   public void on(RestaurantCreatedEvent event) {
     Restaurant restaurant = new Restaurant();
+    restaurant.setAxonId(event.getRestaurantId());
     restaurant.setName(event.getName());
+    restaurant.setUnavailabilities(Collections.emptySet());
 
     repository.save(restaurant);
     log.info("A restaurant was added! {}", restaurant);

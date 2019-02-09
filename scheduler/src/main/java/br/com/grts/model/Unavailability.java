@@ -3,14 +3,15 @@ package br.com.grts.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Restaurant {
+@ToString
+@EqualsAndHashCode
+public class Unavailability {
 
   @Id
   @GeneratedValue
@@ -18,8 +19,7 @@ public class Restaurant {
 
   private String axonId;
 
-  private String name;
-
-  @OneToMany
-  private Set<Unavailability> unavailabilities = new HashSet<>();
+  private LocalDateTime start;
+  private LocalDateTime end;
+  private LocalDateTime createdAt;
 }
