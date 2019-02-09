@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AxonConfiguration {
+
   @Bean
   public SimpleEventSchedulerFactoryBean simpleEventSchedulerFactoryBean() {
     return new SimpleEventSchedulerFactoryBean();
