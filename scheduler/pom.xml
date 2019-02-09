@@ -11,6 +11,12 @@
     <artifactId>ifood-scheduler</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ifood-scheduler</name>
+
+    <properties>
+        <kotlin.version>1.3.21</kotlin.version>
+    </properties>
+
+
     <packaging>jar</packaging>
 
     <dependencies>
