@@ -1,3 +1,5 @@
+monitor/target/
+scheduler/target/
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
