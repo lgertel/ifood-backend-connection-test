@@ -9,6 +9,9 @@ import org.axonframework.commandhandling.model.AggregateIdentifier;
 import org.axonframework.eventhandling.EventHandler;
 import org.axonframework.spring.stereotype.Aggregate;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 
 @Aggregate
