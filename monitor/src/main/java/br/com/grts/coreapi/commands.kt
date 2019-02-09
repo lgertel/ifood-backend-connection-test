@@ -16,3 +16,12 @@ data class ScheduleUnavailabilityCommand(
     val end: LocalDateTime,
     val createdAt: LocalDateTime
 )
+
+data class ToggleRestaurantOnlineCommand(
+    @TargetAggregateIdentifier val restaurantId: String,
+    val time: LocalDateTime
+)
+
+data class ToggleRestaurantOfflineCommand(
+    @TargetAggregateIdentifier val restaurantId: String
+)

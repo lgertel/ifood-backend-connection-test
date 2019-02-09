@@ -1,9 +1,6 @@
 package br.com.grts.web;
 
-import br.com.grts.coreapi.CreateRestaurantCommand;
-import br.com.grts.coreapi.FindAllRestaurantsQuery;
-import br.com.grts.coreapi.FindAllScheduleUnavailabilitiesQuery;
-import br.com.grts.coreapi.ScheduleUnavailabilityCommand;
+import br.com.grts.coreapi.*;
 import br.com.grts.coreapi.queries.Restaurant;
 import br.com.grts.coreapi.queries.ScheduleUnavailability;
 import lombok.AllArgsConstructor;
@@ -55,6 +52,11 @@ public class RestaurantController {
   public List<ScheduleUnavailability> findAllScheduleUnavailabilities() {
     return queryGateway.query(new FindAllScheduleUnavailabilitiesQuery(),
         ResponseTypes.multipleInstancesOf(ScheduleUnavailability.class)).join();
+  }
+
+  @PostMapping("/heartbeat/{restaurantId}")
+  public void heartbeat(@PathVariable String restaurantId) {
+    commandGateway.send(new ToggleRestaurantOnlineCommand(restaurantId, LocalDateTime.now()));
   }
 
 }
