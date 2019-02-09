@@ -9,10 +9,10 @@ data class CreateRestaurantCommand(
 )
 
 data class ScheduleUnavailabilityCommand(
-  @TargetAggregateIdentifier
-  val scheduleUnavailabilityId: String,
-  val restaurantId: String,
-  val start: LocalDateTime,
-  val end: LocalDateTime,
-  val createdAt: LocalDateTime
+    @TargetAggregateIdentifier
+    val scheduleUnavailabilityId: String,
+    val restaurantId: String,
+    val start: LocalDateTime,
+    val end: LocalDateTime,
+    val createdAt: LocalDateTime
 )

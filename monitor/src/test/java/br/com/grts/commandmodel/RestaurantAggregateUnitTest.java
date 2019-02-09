@@ -4,7 +4,6 @@ import br.com.grts.coreapi.CreateRestaurantCommand;
 import br.com.grts.coreapi.RestaurantCreatedEvent;
 import org.axonframework.test.aggregate.AggregateTestFixture;
 import org.axonframework.test.aggregate.FixtureConfiguration;
-
 import org.junit.Before;
 import org.junit.Test;
 

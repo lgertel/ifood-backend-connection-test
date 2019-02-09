@@ -1,13 +1,11 @@
 package br.com.grts.service;
 
-import br.com.grts.coreapi.RestaurantCreatedEvent;
 import br.com.grts.coreapi.UnavailabilityScheduledEvent;
 import br.com.grts.model.Restaurant;
 import br.com.grts.model.Unavailability;
 import br.com.grts.repository.RestaurantRepository;
 import br.com.grts.repository.UnavailabilityRepository;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;

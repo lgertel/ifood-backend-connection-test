@@ -1,6 +1,8 @@
 package br.com.grts.coreapi.queries;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter

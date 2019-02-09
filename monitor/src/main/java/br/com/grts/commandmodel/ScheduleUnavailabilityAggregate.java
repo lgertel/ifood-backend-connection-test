@@ -46,7 +46,7 @@ public class ScheduleUnavailabilityAggregate {
   public void on(UnavailabilityScheduledEvent event) {
     log.info("Handling {} event: {}", event.getClass().getSimpleName(), event);
     this.scheduleUnavailabilityId = event.getScheduleUnavailabilityId();
-    this.restaurantId =  event.getRestaurantId();
+    this.restaurantId = event.getRestaurantId();
     this.start = event.getStart();
     this.end = event.getEnd();
     this.createdAt = event.getCreatedAt();
