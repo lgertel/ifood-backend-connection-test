@@ -1,4 +1,4 @@
-package br.com.grts.scheduler;
+package br.com.grts;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
