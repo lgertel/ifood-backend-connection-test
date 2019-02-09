@@ -1,8 +1,8 @@
-package br.com.grts.ifood.querymodel;
+package br.com.grts.querymodel;
 
-import br.com.grts.ifood.coreapi.events.UnavailabilityScheduledEvent;
-import br.com.grts.ifood.coreapi.queries.FindAllScheduleUnavailabilitiesQuery;
-import br.com.grts.ifood.coreapi.queries.ScheduleUnavailability;
+import br.com.grts.coreapi.FindAllScheduleUnavailabilitiesQuery;
+import br.com.grts.coreapi.UnavailabilityScheduledEvent;
+import br.com.grts.coreapi.queries.ScheduleUnavailability;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.eventhandling.EventHandler;
 import org.axonframework.queryhandling.QueryHandler;

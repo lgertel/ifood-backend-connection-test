@@ -1,8 +1,11 @@
-package br.com.grts.ifood.web;
+package br.com.grts.web;
 
-import br.com.grts.ifood.coreapi.command.CreateRestaurantCommand;
-import br.com.grts.ifood.coreapi.command.ScheduleUnavailabilityCommand;
-import br.com.grts.ifood.coreapi.queries.*;
+import br.com.grts.coreapi.CreateRestaurantCommand;
+import br.com.grts.coreapi.FindAllRestaurantsQuery;
+import br.com.grts.coreapi.FindAllScheduleUnavailabilitiesQuery;
+import br.com.grts.coreapi.ScheduleUnavailabilityCommand;
+import br.com.grts.coreapi.queries.Restaurant;
+import br.com.grts.coreapi.queries.ScheduleUnavailability;
 import lombok.AllArgsConstructor;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.queryhandling.QueryGateway;
@@ -12,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/restaurants")
@@ -38,7 +40,7 @@ public class RestaurantController {
 
   @PostMapping("/schedule/{restaurantId}")
   public void scheduleUnavailability(@PathVariable String restaurantId) {
-     commandGateway.send(
+    commandGateway.send(
         new ScheduleUnavailabilityCommand(
             UUID.randomUUID().toString(),
             restaurantId,

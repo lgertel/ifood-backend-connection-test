@@ -1,7 +1,7 @@
-package br.com.grts.ifood.commandmodel;
+package br.com.grts.commandmodel;
 
-import br.com.grts.ifood.coreapi.command.ScheduleUnavailabilityCommand;
-import br.com.grts.ifood.coreapi.events.UnavailabilityScheduledEvent;
+import br.com.grts.coreapi.ScheduleUnavailabilityCommand;
+import br.com.grts.coreapi.UnavailabilityScheduledEvent;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.CommandHandler;

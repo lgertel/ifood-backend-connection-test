@@ -1,4 +1,4 @@
-package br.com.grts.ifood.config;
+package br.com.grts.config;
 
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;

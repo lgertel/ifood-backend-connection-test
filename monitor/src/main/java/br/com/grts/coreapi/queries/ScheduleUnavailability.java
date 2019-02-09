@@ -1,6 +1,5 @@
-package br.com.grts.ifood.coreapi.queries;
+package br.com.grts.coreapi.queries;
 
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

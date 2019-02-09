@@ -1,4 +1,4 @@
-package br.com.grts.ifood;
+package br.com.grts;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

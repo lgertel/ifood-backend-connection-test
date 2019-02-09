@@ -1,4 +1,4 @@
-package br.com.grts.ifood.coreapi.queries;
+package br.com.grts.coreapi.queries;
 
 import lombok.*;
 

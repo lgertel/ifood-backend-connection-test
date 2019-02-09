@@ -1,7 +1,7 @@
-package br.com.grts.ifood.commandmodel;
+package br.com.grts.commandmodel;
 
-import br.com.grts.ifood.coreapi.command.CreateRestaurantCommand;
-import br.com.grts.ifood.coreapi.events.RestaurantCreatedEvent;
+import br.com.grts.coreapi.CreateRestaurantCommand;
+import br.com.grts.coreapi.RestaurantCreatedEvent;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.CommandHandler;

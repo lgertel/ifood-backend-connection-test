@@ -1,4 +1,4 @@
-package br.com.grts.ifood;
+package br.com.grts;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
